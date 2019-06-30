@@ -1,0 +1,29 @@
+/*
+ *  Copyright (c) 2018-present, Evgeny Nadymov
+ *
+ * This source code is licensed under the GPL v.3.0 license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+.dialogs {
+    float: left;
+    width: calc(36% - 0px);
+    margin: 0;
+    box-sizing: border-box;
+    border-right-width: 1px;
+    border-right-style: solid;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.dialogs-content {
+    overflow: hidden;
+    flex-grow: 1;
+    flex-shrink: 1;
+    position: relative;
+}
+
+.dialogs-third-column {
+    width: calc(26.7% - 0px);
+}

@@ -1,0 +1,168 @@
+/*
+ *  Copyright (c) 2018-present, Evgeny Nadymov
+ *
+ * This source code is licensed under the GPL v.3.0 license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+b,
+strong {
+    font-weight: 500;
+}
+
+em {
+    font-style: italic;
+}
+
+code {
+    font-size: 90%;
+    font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+pre {
+    margin-bottom: 0;
+    overflow: auto;
+    padding: 3px;
+    border: 1px solid #eee;
+    max-height: none;
+    font-size: inherit;
+
+    display: block;
+    line-height: 1.42857143;
+    word-break: break-all;
+    word-wrap: break-word;
+    color: #333;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+
+pre code {
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+    white-space: pre-wrap;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+.message {
+    /*margin: 20px;
+    word-wrap: break-word;*/
+    /*background: transparent;*/
+    cursor: pointer;
+}
+
+.message:hover .message-select-tick {
+    opacity: 0.5;
+}
+
+.message-selected {
+}
+
+.message-selected:hover .message-select-tick {
+    opacity: 1;
+}
+
+.message-selected .message-select-tick {
+    opacity: 1;
+}
+
+.message-highlighted {
+    animation: message-highlighted-animation;
+    animation-duration: 4s;
+    animation-timing-function: ease-out;
+    /*background-color: #80d066;*/
+}
+
+@keyframes message-highlighted-animation {
+    0% {
+        background-color: #80d066;
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+.message-wrapper {
+    max-width: 460px;
+    padding: 8px 15px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.message-content {
+    margin-left: 12px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    overflow: hidden;
+}
+
+.message-title {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.message-text {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.message-meta {
+    user-select: none;
+    color: #adadad;
+    font-size: 0.85em;
+}
+
+.message-body {
+    overflow: hidden;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.message-date {
+    color: #adadad;
+}
+
+.message-views-icon {
+    display: inline-block;
+    width: 16px;
+    height: 11px;
+    vertical-align: baseline;
+    background-image: url(../../Assets/Icons/General_2x.png);
+    background-size: 40px 948px;
+    background-repeat: no-repeat;
+    background-position: -12px -850px;
+}
+
+.message-views {
+    font-weight: 500;
+}
+
+.message-select-tick {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    margin: 9px 0 0 -59px;
+    display: block;
+    background-image: url(../../Assets/Icons/IconsetW_2x.png);
+    background-size: 42px 1171px;
+    background-repeat: no-repeat;
+    background-position: -9px -481px;
+    opacity: 0;
+}
+
+.messages-list-selection-active .message-wrapper {
+    pointer-events: none;
+}

@@ -1,0 +1,33 @@
+/*
+ *  Copyright (c) 2018-present, Evgeny Nadymov
+ *
+ * This source code is licensed under the GPL v.3.0 license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 48px;
+}
+
+.contact-tile {
+    height: 48px;
+    margin-right: 12px;
+}
+
+.contact-name {
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.contact-phone {
+    color: #70777b;
+    font-size: 14px;
+}
+
+.contact-content {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
